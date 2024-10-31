@@ -1,0 +1,21 @@
+{% extends 'model.html' %}
+{% block title %}Cardápio{% endblock %}
+
+{% block content %}
+<h2 class="display-5 text-center text-primary my-5">Cardápio</h2>
+
+<div class="container">
+
+    <div class="row">
+
+        {% for sandwich in sandwiches %}
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 g-4">
+                    {% include 'card.html' %}
+                </div>
+        {% endfor %}
+    
+    </div>
+
+</div>
+
+{% endblock %}
